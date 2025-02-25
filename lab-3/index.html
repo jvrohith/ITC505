@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC505 Lab 3 - Custom Font</title>
+    
+    <style>
+        @font-face {
+            font-family: 'CrazyFont1';
+            src: url('fonts/CrazyFont1.woff2') format('woff2'),
+                 url('fonts/CrazyFont1.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'CrazyFont2';
+            src: url('fonts/CrazyFont2.woff2') format('woff2'),
+                 url('fonts/CrazyFont2.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'CrazyFont3';
+            src: url('fonts/CrazyFont3.woff2') format('woff2'),
+                 url('fonts/CrazyFont3.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'CrazyFont4';
+            src: url('fonts/CrazyFont4.woff2') format('woff2'),
+                 url('fonts/CrazyFont4.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'CrazyFont5';
+            src: url('fonts/CrazyFont5.woff2') format('woff2'),
+                 url('fonts/CrazyFont5.woff') format('woff');
+        }
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'CrazyFont1', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        p:nth-child(2) {
+            font-family: 'CrazyFont2', serif;
+            font-style: italic;
+        }
+        p:nth-child(3) {
+            font-family: 'CrazyFont3', monospace;
+            text-decoration: underline;
+        }
+        p:nth-child(4) {
+            font-family: 'CrazyFont4', cursive;
+            letter-spacing: 2px;
+        }
+        p:nth-child(5) {
+            font-family: 'CrazyFont5', fantasy;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delivering a Custom Font to the Browser</h1>
+    <p>To deliver a custom font to a client (browser), one effective method is by using the @font-face rule.</p>
+    <p>This allows us to host font files on your own server and serve them to users.</p>
+    <p>Different font formats like WOFF2 and WOFF ensure compatibility across various browsers.</p>
+    <p>Using unique fonts can make a webpage stand out visually.</p>
+    <p>Experimenting with typography helps create a fun and engaging design.</p>
+    <br />
+    
+    
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
