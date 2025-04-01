@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna's Anklet Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <h1 id="game-title">Krishna's Anklet Adventure</h1>
+        <div id="story"></div>
+        <img id="storyImage" src="" alt="Story Image">
+        <div id="choices"></div>
+        <div id="button-container">
+            <button id="restartButton" onclick="restartGame()">Restart Journey</button>
+            <button id="addendumButton" onclick="toggleAddendum()">Show addendum</button>
+        </div>
+        
+        <div id="addendum">
+            <div id="addendumContent">
+                <h2>Development Process</h2>
+                <p>This mystical adventure was crafted with care, weaving a tale of ancient secrets and divine relics. Each path was designed to immerse you in the world of Krishna's legends.</p>
+                
+                <h2>Challenges Faced</h2>
+                <p>Balancing historical elements with creative storytelling required careful research. Ensuring all paths led to meaningful conclusions was like solving an ancient puzzle.</p>
+                
+                <h2>Creative Choices</h2>
+                <p>Vibrant colors reflect India's rich culture. The mystical theme is enhanced by the glowing buttons and dynamic transitions that make choices feel magical.</p>
+                
+                <h2>Insights Gained</h2>
+                <p>Creating this adventure deepened my understanding of Indian mythology and interactive storytelling. The journey taught me how choices can shape destinies, both in games and in life.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
