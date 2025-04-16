@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Lib - ITC505 Lab 7</title>
+  
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #444;
+      text-align: center;
+      margin-top: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-image: linear-gradient(to right, #ff7e5f, #feb47b, #ff6a00, #f7b731, #8e44ad, #3498db, #1abc9c);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* Form Styling */
+    form {
+      width: 80%;
+      max-width: 650px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    form:hover {
+      transform: scale(1.02);
+    }
+
+    label {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      color: #333;
+      background-color: #f9f9f9;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      background-color: #e8f7ff;
+      border-color: #4CAF50;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Rainbow Background for form inputs */
+    input[type="text"]:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    input[type="text"]:nth-child(even) {
+      background-color: #e8f7ff;
+    }
+
+    /* Addendum Section */
+    #addendum {
+      background-color: #ffffff;
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    #addendum h2 {
+      font-size: 1.6em;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-image: linear-gradient(to right, #ff7e5f, #feb47b, #ff6a00, #f7b731, #8e44ad, #3498db, #1abc9c);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    #addendum ul {
+      padding-left: 20px;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    #addendum p {
+      font-size: 1.1em;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    footer p {
+      font-size: 1em;
+    }
+
+    footer #lastModified {
+      font-weight: bold;
+    }
+
+    /* Line Alignment */
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 30px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      form {
+        width: 90%;
+      }
+
+      #addendum {
+        width: 90%;
+        padding: 20px;
+      }
+
+      footer p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Create Your Mad Lib</h1>
+  
+  <form action="/ITC505/lab-7/index.html" method="POST">
+    <label for="noun">Noun:</label>
+    <input type="text" id="noun" name="noun" required>
+    
+    <label for="verb">Verb:</label>
+    <input type="text" id="verb" name="verb" required>
+    
+    <label for="adjective">Adjective:</label>
+    <input type="text" id="adjective" name="adjective" required>
+    
+    <label for="adverb">Adverb:</label>
+    <input type="text" id="adverb" name="adverb" required>
+    
+    <label for="pluralNoun">Plural Noun:</label>
+    <input type="text" id="pluralNoun" name="pluralNoun" required>
+    
+    <button type="submit">Generate Mad Lib</button>
+  </form>
+
+  <!-- Addendum Section -->
+  <section id="addendum">
+    <h2>Quick Addendum</h2>
+    <p>This Mad Lib generator was built as part of the ITC505 Lab 7 project, which involves creating an interactive web page using HTML, CSS, and server-side JavaScript with ExpressJS.</p>
+    <p>Enjoy creating your funny stories with different nouns, verbs, adjectives, and more!</p>
+    <hr />
+    <p>For the best experience, fill in the form with creative and funny words!</p>
+  </section>
+
+  <footer>
+    <p>Last updated: 
+      <span id="lastModified"></span>
+    </p>
+  </footer>
+  
+  <script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+  
+</body>
+</html>
