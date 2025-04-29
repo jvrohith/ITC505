@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 30px;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      width: 350px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .addendum {
+      background: #ffffffcc;
+      width: 80%;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .addendum h3 {
+      color: #2c3e50;
+    }
+
+    .addendum p {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="registrationForm">
+      
+      <div class="input-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="input-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <div class="addendum">
+    <h3>Addendum</h3>
+    <p>
+        The application built for secure registration used HTML CSS together with JavaScript to develop the form where users 
+        need to provide first name, last name, email address, password and password confirmation. JavaScript enabled form 
+        fields validation by verifying email address format and matching password entries.
+    </p>
+    <p>
+        The system uses CSS to deliver a responsive layout and it features hover effects on the button and an eye-catching format 
+        design. JavaScript validation received its own external file for purposes of security and better code organization.
+    </p>
+    <p>
+        Client-side assessment acts as the basic protection mechanism to block XSS and SQL Injection attacks in web applications. 
+        The combination of server-side validation with client-side techniques creates an optimal experience along with additional 
+        initial security strength.
+    </p>
+  </div>
+
+  <script src="form-validation.js"></script>
+
+</body>
+</html>
