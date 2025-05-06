@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lights Out</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Lights Out</h1>
+  <div id="board"></div>
+
+  <section id="addendum">
+    <h2>Project Addendum</h2>
+    <p>
+      For this ITC505 final project, I built a functional "Lights Out" game using JavaScript, HTML, and CSS. 
+      The challenge was creating a solvable randomized board. I accomplished this by simulating random valid clicks 
+      on an all-white board. Clicking a square toggles it and its neighbors, and if all are off (black), 
+      the game alerts "You win!". This project helped me practice DOM manipulation and event-driven JavaScript.
+    </p>
+  </section>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* Rainbow background animation */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: rainbow 15s ease infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Light cells */
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+/* Hover effect: glow and pop */
+.cell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #fff, 0 0 20px #ff0;
+}
+
+/* Toggled OFF state */
+.cell.is-off {
+  background-color: black;
+  box-shadow: inset 0 0 8px #000;
+}
+
+/* Addendum section style */
+#addendum {
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: #ffffffcc;
+  border: 1px solid #ccc;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Footer styling */
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333;
+}
